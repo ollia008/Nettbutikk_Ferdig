@@ -13,6 +13,7 @@ namespace Nettbutikk.Controllers
         [HttpPost]
         public IActionResult NewUser(LoginnModel objLoginnModel)
         {
+
             string conStr = "Data Source=.\\SQLEXPRESS; Initial Catalog=nettbutikk; Integrated Security=True";
             SqlConnection con = new SqlConnection(conStr);
             string bruker = objLoginnModel.Username;
