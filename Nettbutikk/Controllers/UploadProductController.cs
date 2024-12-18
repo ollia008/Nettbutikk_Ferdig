@@ -21,6 +21,7 @@ namespace Nettbutikk.Controllers
             string conStr = "Data Source=.\\SQLEXPRESS; Initial Catalog=nettbutikk; Integrated Security=True";
             SqlConnection con = new SqlConnection(conStr);
             string qry = $"insert into Products values (@ImageData, @Pris)";
+            Console.WriteLine(objUploadProductModel.pris);
 
             con.Open();
             SqlCommand cmd = new SqlCommand(qry, con);
